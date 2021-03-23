@@ -75,7 +75,7 @@ body{
     margin: 1.1rem;
 }
 .card-img-top:hover{
-    
+    transition-delay: 1s;
    transform: scale(1.5);
     
 }
