@@ -3,21 +3,21 @@
 body{
     overflow-x: hidden;
     font-family: 'Lato', sans-serif;
-    
-    color: #505962;
+    background-color: #151515;
+    color: #ffffff;
 }
 
 /*-- navbar style --*/
-.animate__animated.animate__bounceInUp{
-    --animation-delay: 5s;
-}
+/* .animate__animated.animate__bounceInUp{
+    -webkit-animation-duration: 5s;
+} */
 .navbar{
     text-transform: uppercase;
     font-weight: 700;
     font-size: .9rem;
     letter-spacing: .1rem;
-    background: rgba(0,0,0,.6)!important;
-    
+    background: rgba(21, 21, 21, 1)!important;
+    opacity: 10;
     
 }
 .navbar-nav li{
@@ -25,7 +25,7 @@ body{
     
 }
 .navbar-link {
-    color: black;
+    color: white;
     padding-top: .8rem;
 }
 
@@ -129,7 +129,7 @@ body{
     border-radius: 2px;
 }
 .skillLevel{
-    background: #505962;
+    background: #B2AB8C;
     width: 100%;
     height: 10px;
 }
@@ -143,14 +143,22 @@ text-align: center;
 font-size: large;
 
 }
+.card,.jumbotron,.edudiv{
+    background-color: #151515;
+    color: #ffffff;
+}
 logo{
     background: #ffffff;
     
 }
 .col-md-3:hover{
-   transition-duration: 1s;
-   border: 1px solid black;
-   border-radius: 2%;   
+ opacity: 0.5;
+ background-color: #000043;  
+}
+.col-md-3{
+    opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
 }
 
 footer{
@@ -190,6 +198,33 @@ footer{
    
     font-size: 1rem;
     
+}
+.front,
+.back {
+  backface-visibility: hidden;
+  transition: transform 0.6s linear;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.14);
+}
+/* product frontside */
+.front {
+  transform: perspective(600px) rotateY(0deg);
+}
+/* product backside */
+.back {
+  position: absolute;
+  background: #000043;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  transform: perspective(600px) rotateY(180deg);
+}
+.back-content {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50px;
+  left: 0;
 }
         
 }
